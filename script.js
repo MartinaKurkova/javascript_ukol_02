@@ -25,14 +25,14 @@ const justFood = (amountPeople) => {
 console.log(justFood(5));
 
 const yourMama = (amountPeople) => {
-    const price2 = 200;
+    const price2 = 500;
     return `Catering od Your Mama pro ${amountPeople} lidí za ${amountPeople * price2} Kč.`
 }
 
 console.log(yourMama(5));
 
 const flavourHeaven = (amountPeople) => {
-    const price3 = 300; 
+    const price3 = 2000; 
     return `Catering od Flavour Heaven pro ${amountPeople} lidí za ${amountPeople * price3} Kč.`
 }
 
@@ -43,4 +43,8 @@ const createEvent = (eventName, amountPeople, catering) => {
     return `<p> Událost ${eventName} s ${catering(amountPeople)}</p>`;
 };
 
+
+
+console.log(createEvent("Opékání buřtů", 10, justFood));
+console.log(createEvent("Křest knihy", 50, yourMama));
 console.log(createEvent("Inaugurace prezidenta", 100, flavourHeaven));
